@@ -1,0 +1,15 @@
+{
+  "name": "dummy_data_generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "generate": "rm -rf cruise_data.json && node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jsonfile": "^3.0.0",
+    "randomstring": "^1.1.5"
+  }
+}
