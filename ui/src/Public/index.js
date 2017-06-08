@@ -1,9 +1,13 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {render} from 'react-dom';
+import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 
-import HomePageContainer from '../Containers/HomePageContainer.jsx';
+import AppContainer from '../Containers/AppContainer';
+import HomePage from '../Components/HomePage/HomePage';
+import Cruises from '../Components/Cruises/Cruises';
 
-ReactDOM.render(
-  <HomePageContainer />,
+
+render(
+  <AppContainer />,
   document.getElementById('app')
 );
