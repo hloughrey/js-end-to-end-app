@@ -1,7 +1,7 @@
 'use strict';
 import React, { Component } from 'react';
 
-import './Header.scss';
+import styles from './Header.scss';
 
 export default class Header extends Component {
   constructor(props) {

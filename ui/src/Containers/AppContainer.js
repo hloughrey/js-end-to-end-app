@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 
 import Header from '../Components/Header/Header'
@@ -25,6 +26,6 @@ export default class AppContainer extends Component {
 };
 
 
-AppContainer.PropTypes = {
-  children: PropTypes.object.isRequired
+AppContainer.propTypes = {
+  children: PropTypes.array.isRequired
 };

@@ -5,15 +5,18 @@
   "main": "index.js",
   "scripts": {
     "clean": "rm -rf ./node_modules && rm -rf ./dist && npm install",
-    "build": "webpack",
-    "dev": "webpack-dev-server"
+    "build": "webpack --display-error-details",
+    "dev": "webpack-dev-server",
+    "webpack-debug": "webpack --display-error-details"
   },
   "dependencies": {
     "axios": "^0.16.1",
+    "extract-text-webpack-plugin": "^2.1.2",
     "jquery": "^3.1.1",
     "node-sass": "^4.5.2",
-    "react": "^0.14.7",
-    "react-dom": "^0.14.7",
+    "prop-types": "^15.5.10",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
     "react-router-dom": "^4.1.1"
   },
   "devDependencies": {
@@ -25,10 +28,10 @@
     "file-loader": "^0.8.5",
     "html-webpack-plugin": "^2.8.1",
     "path": "^0.12.7",
-    "sass-loader": "^3.1.2",
+    "sass-loader": "^6.0.5",
     "style-loader": "^0.13.0",
     "url-loader": "^0.5.7",
-    "webpack": "^1.12.13",
+    "webpack": "^2.6.1",
     "webpack-dev-server": "^1.14.1"
   },
   "author": "hugh loughrey",

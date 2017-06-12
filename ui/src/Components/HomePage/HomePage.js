@@ -1,7 +1,7 @@
 'use strict';
 import React, { Component} from 'react';
 
-import './HomePage.scss';
+import styles from './HomePage.scss';
 
 export default class HomePage extends Component {
   constructor(props) {
