@@ -16,15 +16,15 @@ export default class AppContainer extends Component {
     return (
         <div className="container-fluid">
             <div className='row'>
-              <h2>Hello World</h2>
+              {this.props.children}
             </div>
         </div>
-    )
+    );
   };
 
 };
 
 
 AppContainer.PropTypes = {
-  children: PropTypes.object.isrequired
+  children: PropTypes.object.isRequired
 };
