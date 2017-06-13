@@ -8,11 +8,11 @@ import HomePage from './Components/HomePage/HomePage';
 import Cruises from './Components/Cruises/Cruises';
 
 render(
-  <BrowserRouter >
-    <AppContainer>
-      <Route exact path='/' component={HomePage} />
-      <Route path='/cruises' component={Cruises} />
-    </AppContainer>
-  </BrowserRouter>,
-  document.getElementById('app')
+	<BrowserRouter >
+		<AppContainer>
+			<Route exact path='/' component={HomePage} />
+			<Route path='/cruises' component={Cruises} />
+		</AppContainer>
+	</BrowserRouter>,
+	document.getElementById('app')
 );
