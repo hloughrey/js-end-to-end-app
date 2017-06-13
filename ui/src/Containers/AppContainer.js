@@ -9,7 +9,12 @@ export default class AppContainer extends Component {
   constructor() {
     super()
     this.state = {
-      menu: ['Home', 'Cruise', 'Deals', 'Contact Us']
+      menu: [
+        {Route: 'Home', URL: '#'}, 
+        {Route: 'Cruises', URL: 'Cruises'}, 
+        {Route: 'Deals', URL: 'Deals'}, 
+        {Route: 'Contact Us', URL: 'Contact'}
+      ]
     }
   }
 
@@ -17,6 +22,7 @@ export default class AppContainer extends Component {
     return (
         <div className="container-fluid">
             <div className='row'>
+              <Header menu={this.state.menu} />
               {this.props.children}
             </div>
         </div>

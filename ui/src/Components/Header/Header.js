@@ -1,14 +1,11 @@
 'use strict';
 import React, { Component } from 'react';
+import { Link, IndexLink } from 'react-router';
 
 import styles from './Header.scss';
 
-export default class Header extends Component {
-  constructor(props) {
-    super(props);
-  }
+const Header = (props) => {
 
-  render() {
     return (
       <nav className="navbar navbar-default">
         <div className="container-fluid">
@@ -22,14 +19,15 @@ export default class Header extends Component {
           </div>
           <div id="navbar" className="navbar-collapse collapse">
             <ul className="nav nav-justified">
-              {this.props.menu.map((item, index) => {
-                return <li key={index}><a href="#">{item}</a></li>
+              {props.menu.map((item, index) => {
+                return (item === 'Home') ? <li key={index}><a href={`/${item.URL}`} className='active'>{item.Route}</a></li> 
+                                         : <li key={index}><a href={`/${item.URL}`} className='active'>{item.Route}</a></li>
               })}
             </ul>
           </div>
         </div>
       </nav>
     )
-  }
+};
 
-}
+export default Header;

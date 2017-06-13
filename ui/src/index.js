@@ -10,7 +10,7 @@ render(
   <BrowserRouter >
     <AppContainer>
       <Route exact path='/' component={HomePage} />
-      <Route path='/crusies' component={Cruises} />
+      <Route path='/cruises' component={Cruises} />
     </AppContainer>
   </BrowserRouter>,
   document.getElementById('app')
