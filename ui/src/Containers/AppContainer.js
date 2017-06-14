@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 
+import Routes from '../Components/Routes/Routes';
 import Header from '../Components/Header/Header';
 
 export default class AppContainer extends Component {
@@ -21,15 +21,10 @@ export default class AppContainer extends Component {
 			<div className="container-fluid">
 				<div className='row'>
 					<Header menu={this.state.menu} />
-					{this.props.children}
+					<Routes />
 				</div>
 			</div>
 		);
 	}
 
 }
-
-
-AppContainer.propTypes = {
-	children: PropTypes.array.isRequired
-};

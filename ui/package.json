@@ -7,7 +7,6 @@
     "clean": "rm -rf ./node_modules && rm -rf ./dist && yarn install",
     "build": "webpack",
     "dev": "webpack-dev-server",
-    "lint": "eslint --ignore-pattern **/bundle-*.js --ext .js, .jsx src/**",
     "webpack-debug": "webpack --display-error-details"
   },
   "dependencies": {
@@ -25,7 +24,7 @@
     "prop-types": "^15.5.10",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
-    "react-router-dom": "^4.1.1"
+    "react-router-dom": "next"
   },
   "devDependencies": {
     "babel-core": "^6.5.1",

@@ -1,5 +1,6 @@
 'use strict';
 import React, { Component } from 'react';
+import { Redirect } from 'react-router-dom';
 import axios from 'axios';
 
 export default class Table extends Component {
@@ -12,9 +13,14 @@ export default class Table extends Component {
 
 		this.onClick = this.onClick.bind(this);
 	}
+	
 
-	onClick(e) {
-		console.log('You clicked a row...this should do something clever!', e);
+	onClick(cruise) {
+		// let path = `/booking/${cruise.liner}`;
+		// console.log(cruise);
+		// console.log(path);
+		// <Route path="/booking" render={() => <BookingForm />}/>;
+		<Redirect to='/booking' />;
 	}
 
 	componentDidMount() {
@@ -51,7 +57,14 @@ export default class Table extends Component {
 					</thead>
 					<tbody>
 						{this.state.cruises.data.map((cruise, index) => {
-							return <tr key={index} onClick={this.onClick}><td>{cruise.liner}</td><td>{cruise.first_port}</td><td>{cruise.last_port}</td><td>£{cruise.price}</td></tr>;
+							return (
+								<tr key={index} data-value={cruise} onClick={() => this.onClick(cruise)}>
+									<td>{cruise.liner}</td>
+									<td>{cruise.first_port}</td>
+									<td>{cruise.last_port}</td>
+									<td>£{cruise.price}</td>
+								</tr>
+							); 
 						})}
 					</tbody>
 				</table>
