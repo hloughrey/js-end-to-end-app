@@ -1,9 +1,10 @@
 'use strict';
 import React, { Component } from 'react';
-import { Redirect } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import axios from 'axios';
 
-export default class Table extends Component {
+class Table extends Component {
 	constructor(props) {
 		super(props);
 
@@ -16,11 +17,8 @@ export default class Table extends Component {
 	
 
 	onClick(cruise) {
-		// let path = `/booking/${cruise.liner}`;
-		// console.log(cruise);
-		// console.log(path);
-		// <Route path="/booking" render={() => <BookingForm />}/>;
-		<Redirect to='/booking' />;
+		let path = `/booking/${cruise.liner}`;
+		this.props.history.push(path);
 	}
 
 	componentDidMount() {
@@ -72,3 +70,11 @@ export default class Table extends Component {
 		}
 	}
 }
+
+Table.PropTypes = {
+	history: PropTypes.shape({
+		push: PropTypes.func.isRequired,
+	}),
+};
+
+export default withRouter(Table);
