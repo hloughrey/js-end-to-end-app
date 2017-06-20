@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import axios from 'axios';
 
 class Table extends Component {
+
 	constructor(props) {
 		super(props);
 
@@ -71,10 +72,10 @@ class Table extends Component {
 	}
 }
 
-Table.PropTypes = {
+Table.propTypes = {
 	history: PropTypes.shape({
-		push: PropTypes.func.isRequired,
-	}),
+		push: PropTypes.func.isRequired
+	})
 };
 
 export default withRouter(Table);
