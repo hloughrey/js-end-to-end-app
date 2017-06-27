@@ -10,7 +10,7 @@ export default class AppContainer extends Component {
 			menu: [
 				{Route: 'Home', URL: '#'}, 
 				{Route: 'Cruises', URL: 'Cruises'}, 
-				{Route: 'Deals', URL: 'Deals'}, 
+				{Route: 'Bookings', URL: 'Bookings'}, 
 				{Route: 'Contact Us', URL: 'Contact'}
 			]
 		};

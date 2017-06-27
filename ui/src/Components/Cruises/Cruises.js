@@ -18,7 +18,7 @@ class Table extends Component {
 	
 
 	onClick(cruise) {
-		let path = `/booking/${cruise.liner}`;
+		let path = `/bookings/${cruise.liner}`;
 		this.props.history.push(path);
 	}
 

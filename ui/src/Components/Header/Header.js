@@ -21,8 +21,7 @@ const Header = (props) => {
 				<div id="navbar" className="navbar-collapse collapse">
 					<ul className="nav nav-justified">
 						{props.menu.map((item, index) => {
-							return (item === 'Home') ? <li key={index}><a href={`/${item.URL}`} className='active'>{item.Route}</a></li> 
-								: <li key={index}><Link to={`/${item.URL}`} className='active'>{item.Route}</Link></li>;
+							return <li key={index}><Link to={`/${item.URL}`} className='active'>{item.Route}</Link></li>;
 						})}
 					</ul>
 				</div>
