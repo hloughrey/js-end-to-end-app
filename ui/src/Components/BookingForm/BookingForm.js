@@ -1,21 +1,28 @@
 'use strict';
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-const BookingForm =  ({ match }) => {
-	return (
-		<form className="form-horizontal">
-			<fieldset>
-				<div className="form-group">
-					<div className="col-lg-6">
-						<label htmlFor="inputCruise">Cruise</label>	
-						<input type="text" className="form-control" id="inputCruise" placeholder={match.params.cruise} />
+class BookingForm extends Component {
+	constructor(props) {
+		super(props);
+	}
+
+	render() {
+		return (
+			<form className="form-horizontal">
+				<fieldset>
+					<div className="form-group">
+						<div className="col-lg-6">
+							<label htmlFor="inputCruise">Cruise</label>	
+							<input type="text" className="form-control" id="inputCruise" placeholder={this.props.match.params.cruise ? this.props.match.params.cruise : ''} />
+						</div>
 					</div>
-				</div>
-			</fieldset>
-		</form>
-	);
-};
+				</fieldset>
+			</form>
+		);
+	}
+	
+}
 
 BookingForm.propTypes = {
 	match: PropTypes.object	
