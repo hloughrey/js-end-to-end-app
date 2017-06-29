@@ -6,10 +6,10 @@ import HomePage from '../HomePage/HomePage';
 import Cruises from '../Cruises/Cruises';
 import BookingForm from '../../Containers/BookingFormContainer';
 
-import style from './Routes.scss';
+import styles from './Routes.scss';
 
 const Routes = () => (
-	<main className="mainContent">
+	<main className={styles.mainContent}>
 		<Route exact path='/' component={HomePage} />
 		<Route exact path='/cruises' component={Cruises} />
 		<Route exact path='/bookings' component={BookingForm} />

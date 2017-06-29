@@ -7,10 +7,21 @@ import BookingForm from '../Components/BookingForm/BookingForm';
 class BookingFormContainer extends Component {
 	constructor() {
 		super();
+
+		this.onFormSubmit = this.onFormSubmit.bind(this);
+	}
+
+	onFormSubmit(e) {
+		console.log(e);
 	}
 
 	render() {
-		return <BookingForm match={this.props.match}/>;
+		return (
+			<BookingForm 
+				match={this.props.match}
+				onFormSubmit={this.onFormSubmit}			
+			/>
+		);
 	}
 
 }
