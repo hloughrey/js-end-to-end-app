@@ -35,17 +35,11 @@ module.exports = {
       { test: /\.scss?$/, 
         exclude: /node_modules/, 
         loader: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: ['css-loader', 'sass-loader']
+          fallback: 'style-loader', 
+          // Parse scss into css and modularise it with a hash
+          use: 'css-loader?modules&localIdentName=[name]__[local]___[hash:base64:5]&sourceMap!sass-loader?sourceMap'
         })
-      },
-      { test: /\.css?$/, 
-        exclude: /node_modules/, 
-        loader: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: ['css-loader']
-        })
-      },
+      }
     ]
   },
   plugins: [
@@ -53,7 +47,7 @@ module.exports = {
       inject: true,
       template: path.join(path.resolve('.'), 'src', 'index.html')
     }),
-    new ExtractTextPlugin('style.css'),
+    new ExtractTextPlugin({filename: "[name].[chunkhash].css", allChunks: true }),
     new webpack.ProvidePlugin({
       jQuery: 'jquery',
       $: 'jquery',
